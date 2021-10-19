@@ -23,11 +23,11 @@
     - name: stat file
       stat: 
         path: /tmp/temp
-      register: var_stat
+      register: __var_stat
 
     - name: file delete without module but with tests
       command: "rm /tmp/temp" 
-      #when: var_stat.stat.exists == true
+      #when: __var_stat.stat.exists == true
       #ignore_errors: true
       #failed_when: false
       #changed_when: false
