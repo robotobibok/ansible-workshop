@@ -1,0 +1,13 @@
+- name: First playbook
+  hosts: linux
+
+  tasks:
+    - name: Setup motd on linux boxes
+      copy:
+        content: "ILS WORKSHOPS - ANSIBLE"
+        dest: "/etc/motd"
+      register: var_motd
+
+    - name: debug output
+      debug:
+        var: var_motd 

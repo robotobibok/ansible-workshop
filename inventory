@@ -1,0 +1,10 @@
+
+[ansible]
+controller
+
+[managed]
+managed
+
+[linux]
+controller
+managed
